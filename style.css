@@ -1,0 +1,134 @@
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0d10;
+  color: #e8eaed;
+  font: 15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  padding: 24px 16px;
+}
+
+.app { width: min(980px, 100%); margin: auto; }
+
+.card {
+  background: #14171b;
+  border: 1px solid #23282e;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+h1 { margin: 0; font-size: 24px; }
+h2 { margin: 20px 0 12px; font-size: 18px; }
+.sub { margin: 6px 0 18px; color: #9aa4af; }
+.muted { color: #9aa4af; }
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.spacer { flex: 1; }
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2a3038;
+  color: #e8eaed;
+}
+
+button.primary { background: #2f6fed; color: white; }
+button.danger { background: #7f2626; color: white; }
+
+input[type="file"] { display: none; }
+
+.drop {
+  border: 2px dashed #39424c;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  background: #101317;
+  margin: 14px 0;
+}
+
+.drop.over {
+  border-color: #4c8dff;
+  background: #16202b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.page {
+  background: #0d1014;
+  border: 1px solid #262c33;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page canvas {
+  width: 100%;
+  display: block;
+  background: white;
+}
+
+.page .label {
+  padding: 7px 9px;
+  font-size: 12px;
+  color: #9aa4af;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .tools {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.page .tools button {
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border-radius: 7px;
+  background: #000a;
+}
+
+.page.dragging { opacity: .45; outline: 2px solid #4c8dff; }
+
+.saved {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #262c33;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: #101317;
+}
+
+.saved .meta {
+  color: #9aa4af;
+  font-size: 13px;
+}
+
+#status {
+  margin-top: 12px;
+  color: #9aa4af;
+  min-height: 20px;
+}
+
+.hidden { display: none; }

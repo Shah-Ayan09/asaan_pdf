@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asaan PDF</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <h1>Asaan PDF</h1>
+      <p class="sub">Add images, create PDFs, reopen saved PDFs, add more pages, and rearrange pages.</p>
+
+      <div class="row">
+        <button id="newPdf" class="primary">New PDF from images</button>
+        <button id="uploadPdf">Upload existing PDF</button>
+
+        <input
+          id="imageInput"
+          type="file"
+          accept="image/*"
+          multiple
+        >
+
+        <input
+          id="pdfInput"
+          type="file"
+          accept="application/pdf"
+        >
+      </div>
+
+      <div id="editorCard" class="hidden">
+        <div class="row">
+          <h2 id="docTitle">Untitled PDF</h2>
+          <span class="spacer"></span>
+          <button id="addImages">Add images</button>
+          <button id="savePdf">Save</button>
+          <button id="downloadPdf" class="primary">Download</button>
+          <button id="closeEditor">Close</button>
+        </div>
+
+        <div id="drop" class="drop">
+          <strong>Drop images here</strong> to add pages<br>
+          <span class="muted">or click to choose image files</span>
+        </div>
+
+        <div id="pages" class="grid"></div>
+        <p class="muted">Drag a page to rearrange it. Click × to delete it.</p>
+      </div>
+
+      <h2>Saved PDFs</h2>
+      <div id="savedList"></div>
+
+      <div id="status"></div>
+    </section>
+  </main>
+</body>
+</html>

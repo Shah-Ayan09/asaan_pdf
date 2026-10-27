@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Image Upload Test</title>
+</head>
+<body>
+  <h1>Image upload test</h1>
+
+  <button onclick="document.getElementById('testFile').click()">
+    Choose an image
+  </button>
+
+  <input
+    id="testFile"
+    type="file"
+    accept="image/*"
+    multiple
+    style="display:none"
+  >
+
+  <p id="result">No image selected yet.</p>
+
+  <script>
+    const input = document.getElementById('testFile');
+    const result = document.getElementById('result');
+
+    input.addEventListener('change', () => {
+      const count = input.files.length;
+
+      result.textContent = `Selected ${count} image(s).`;
+
+      console.log('Image selection works:', count);
+
+      if (count > 0) {
+        alert(`Success! You selected ${count} image(s).`);
+      }
+    });
+  </script>
+</body>
+</html>
